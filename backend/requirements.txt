@@ -1,0 +1,47 @@
+fastapi==0.115.11
+uvicorn[standard]==0.34.0
+python-dotenv==1.0.1
+pydantic==2.10.4
+pydantic-settings==2.6.1
+
+# Database
+sqlalchemy==2.0.36
+asyncpg==0.30.0
+alembic==1.14.1
+aiosqlite==0.20.0
+
+# Redis
+redis==5.2.0
+
+# LLM & AI
+litellm==1.58.0
+openai==1.59.0
+groq==0.5.0
+
+# Observability Libraries
+arize-phoenix==13.2.0                # AI observability platform [citation:2]
+observio>=0.1.0                       # Full-stack LLM tracing [citation:6]
+agentobs>=1.0.6                       # Event-based observability [citation:11]
+ignis-observability>=0.1.0            # LangSmith + local DB [citation:8]
+
+# OpenTelemetry
+opentelemetry-api==1.29.0
+opentelemetry-sdk==1.29.0
+opentelemetry-instrumentation==0.50b0
+opentelemetry-exporter-otlp==1.29.0
+
+# OpenInference (Phoenix instrumentation)
+openinference-instrumentation-openai==0.1.19
+openinference-instrumentation-langchain==0.1.20
+openinference-instrumentation-groq==0.1.0
+openinference-instrumentation-litellm==0.1.0
+openinference-instrumentation-crewai==0.1.0
+
+# Frontend (development only)
+streamlit==1.41.1                     # Quick UI prototype
+
+# Utilities
+httpx==0.28.1
+tenacity==9.0.0
+pytest==8.3.4
+pytest-asyncio==0.25.0
