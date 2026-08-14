@@ -62,3 +62,60 @@ Companies spend millions on AI APIs with **zero visibility**. ARGUS solves this:
 - Model downtime alerts
 - Budget threshold notifications
 
+
+## 🛠️ Tech Stack
+
+| Component | Technology |
+|-----------|------------|
+| **Backend** | FastAPI, Python 3.11+ |
+| **LLM Integration** | Groq API, OpenAI API |
+| **Databases** | PostgreSQL, Redis, ClickHouse |
+| **Frontend** | React 18, Tailwind CSS |
+| **Containerization** | Docker, Docker Compose |
+| **Monitoring** | Prometheus, Grafana |
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Python 3.11+
+- Docker & Docker Compose
+- Groq API Key
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/simhadriuttareni/ARGUS---REAL-AI-Observability.git
+cd ARGUS---REAL-AI-Observability
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Set environment variables
+cp backend/.env.example backend/.env
+# Edit backend/.env with your API keys
+ARGUS/
+├── backend/
+│   ├── app/
+│   │   ├── api/          # API routes
+│   │   ├── core/         # Core logic
+│   │   ├── models/       # Database models
+│   │   └── services/     # Business logic
+│   ├── Dockerfile
+│   └── requirements.txt
+├── frontend/
+│   └── src/
+│       └── App.jsx       # React dashboard
+├── infrastructure/
+│   └── docker-compose.yml
+└── README.md
+# Run with Docker
+docker-compose -f infrastructure/docker-compose.yml up --build -d
+
+# Or run locally
+cd backend
+python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
